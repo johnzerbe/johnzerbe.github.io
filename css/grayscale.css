@@ -248,6 +248,103 @@
     width: 30%;
   }
 }
+/* Featured Project hover animation */
+.featuredOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgb(2,0,36);
+  background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(101,119,161,0.6) 0%, rgba(101,161,157,0.6) 100%);
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.featuredContainer:hover .featuredOverlay {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.featuredContainer:hover img {
+  -webkit-filter: blur(15px);
+  -moz-filter: all .25s ease;
+  -o-filter: all .25s ease;
+  -ms-filter: all .25s ease;
+  filter: blur(2px) 
+}
+
+/* Left Hover */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 100%;
+  right: 0;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(101,119,161,0.6) 0%, rgba(101,161,157,0.6) 100%);
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: .3s ease;
+}
+
+.projectContainer:hover .overlay {
+  width: 100%;
+  left: 0;
+}
+
+.projectContainer:hover img {
+  -webkit-filter: blur(15px);
+  -moz-filter: all .25s ease;
+  -o-filter: all .25s ease;
+  -ms-filter: all .25s ease;
+  filter: blur(2px);
+}
+
+/* Right Hover */
+.overlayRight {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(101,119,161,0.6) 0%, rgba(101,161,157,0.6) 100%);
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: .3s ease;
+}
+
+.projectContainerRight:hover .overlayRight {
+  width: 100%;
+}
+
+.projectContainerRight:hover img {
+  -webkit-filter: blur(15px);
+  -moz-filter: all .25s ease;
+  -o-filter: all .25s ease;
+  -ms-filter: all .25s ease;
+  filter: blur(2px);
+}
+
+
+.text {
+  color: white;
+  font-size: 3.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
 
 .signup-section {
   padding: 10rem 0;
